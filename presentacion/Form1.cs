@@ -23,25 +23,21 @@ namespace presentacion
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            
-            Producto producto = new Producto
-            {
-                Referencia = txtReferencia.Text,
-                Nombre = txtNombre.Text,
-                Existencias = int.Parse(txtCantidad.Text),
-                PrecioUnitario = double.Parse(txtPrecioUni.Text),
-                StockMinimo = int.Parse(txtStock.Text),
-                Estado = cmbEstado.SelectedItem.ToString()
-            };
+        {   
 
+            
+                Producto producto = new Producto
+                {
+                    Referencia = txtReferencia.Text,
+                    Nombre = txtNombre.Text,
+                    Existencias = int.Parse(txtCantidad.Text),
+                    PrecioUnitario = double.Parse(txtPrecioUni.Text),
+                    StockMinimo = int.Parse(txtStock.Text),
+                    Estado = cmbEstado.SelectedItem.ToString()
+                };
+                var mensaje = gestorVentas.AgregarProducto(producto);
            
-            gestorVentas.AgregarProducto(producto);
-
-            
-            MessageBox.Show("Datos guardados correctamente.");
-
-            
+                MessageBox.Show(mensaje);         
             LimpiarCampos();
         }
 

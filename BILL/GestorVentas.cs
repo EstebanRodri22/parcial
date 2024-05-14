@@ -19,16 +19,22 @@ namespace BILL
         }
 
         //   agregar un producto
-        public void AgregarProducto(Producto producto)
+        public string AgregarProducto(Producto producto)
         {
+            string mensaje;
             if (Productos.Any(p => p.Referencia == producto.Referencia))
             {
-                Console.WriteLine("Ya existe un producto con la misma referencia.");
+               return  mensaje = "Ya existe un producto con la misma referencia.";
+                
             }
-            else if (producto.ValidarDatos())
+            if (producto.ValidarDatos())
             {
                 Productos.Add(producto);
+                return  mensaje = "Se guardo correctamente";
+                 
             }
+
+            return mensaje = "No se pudo guardar";
         }
 
         //   agregar una factura
