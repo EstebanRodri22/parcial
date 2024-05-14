@@ -16,5 +16,20 @@ namespace presentacion
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

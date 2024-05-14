@@ -44,6 +44,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnVentas
             // 
@@ -53,6 +54,7 @@
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnFacturas
             // 
@@ -62,6 +64,7 @@
             this.btnFacturas.TabIndex = 2;
             this.btnFacturas.Text = "facturas";
             this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
             // pictureBox1
             // 
